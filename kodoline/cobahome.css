@@ -1,0 +1,21 @@
+.header{
+	width: 100%;
+	font-family: "Chiller", fantasy;
+	height: 50px;
+	font-size: 30px;
+}
+
+.logo{
+	width: 30%;
+	float: left;
+}
+
+.judul{
+	margin: 10px;
+	background: black;
+	color: orange;
+	width: 90px;
+	padding: 5px;
+	font-size: 25px;
+	float: left;
+}

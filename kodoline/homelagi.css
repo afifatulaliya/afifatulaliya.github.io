@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Jossefin Sans, sans-serif;
+}
+
+.header{
+	width: 100%;
+	font-family: "Chiller", fantasy;
+	height: 50px;
+	font-size: 30px;
+
+}
+
+.logo{
+	width: 30%;
+	float: left;
+
+}
+
+.judul{
+	margin: 10px;
+	background: black;
+	color: orange;
+	width: 90px;
+	padding: 5px;
+	font-size: 25px;
+	float: left;
+}
+
+div a{
+	padding: 20px;
+	text-decoration: none;
+	font-size: 15px;
+	height: 10px;
+	width: 20px;
+	margin: 0 -20px;
+}
+
+.menu ul{
+	padding:0px;
+	margin:0px;
+	overflow: hidden;
+}
+
+.menu ul li a{
+	float:left;
+	list-style-type: none;
+	padding: 20px;
+}
+.section1{
+
+}
+
+.section2{
+	width: 68vw;
+	display: inline-block;
+}
+
+.search{
+	margin-left: 50%;
+	margin-top: 10%;
+	width: 23vw;
+	height: 5vh;
+	border: 1px ridge #d5d5e6;
+}
+
+.search[placeholder]{
+	padding-left: 1%; 
+}
+
+.btnsearch{
+	width: 5vw;
+	height: 5vh;
+	background-color: #19e5e5;
+	border: 0px;
+}
+
+nav ul{
+    float: right;
+    display: flex;
+    list-style-type: none;
+    margin-top: 4%;
+    width: 100%;
+
+}
+nav a{
+    display: flex;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding: padding: 3% 3% 3% 3%;; /*padding item dengan item lainnya*/
+
+}
+
+.slider{
+	background-color: #ececfa;
+	width: 68vw;
+	height: 52vh;
+	margin-top: 7%;
+	overflow: hidden;
+	margin-top: 15vh;
+}
+
+.slider .slides{
+	width: 200vw;
+	height: 52vh;
+	display: flex;
+}
+
+.slide1{
+	width: 68vw;
+	height: 52vh;
+}
+
+.slide1 .img1{
+	width: 33vw;
+	height: 38vh;
+	display: inline-block;
+	margin-top: 4%;
+}
+
+.slide1 .img2{
+	width: 38vw;
+	height: 50vh;
+}
+
+.slide1 .img3{
+	width: 38vw;
+	height: 52vh;
+}
+
+.slide1 .img4{
+	width: 38vw;
+	height: 52vh;
+}
+
+.slide1 .img5{
+	width: 38vw;
+	height: 52vh;
+}
+
+.slide1 .img6{
+	width: 38vw;
+	height: 52vh;
+}
+
+.constant{
+	font-family: 'Pacifico';
+	margin-bottom: 4vh;
+}
+
+.comstamt h1{
+	margin-top: 10vh;
+	color: #19e5e5;
+}
+

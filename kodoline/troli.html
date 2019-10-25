@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TOKO OUTDOOR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="container">
+<center><h1>KODOLINE</h1><H4></H4></center>
+<HR> 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Jaket Rei (250.000)</h5>
+          <p class="card-text">Id: 1234089</p>
+          <button class="add btn btn-success" data-id="1" data-nama="Rei" data-qty="1" data-price="250000"><i class="fa fa-shopping-cart" aria-hidden="true" ></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Jaket Consina (200.000)</h5>
+          <p class="card-text">Id:1324087</p>
+          <button class="add btn btn-success" data-id="2" data-nama="Consina" data-qty="1" data-price="200000"><i class="fa fa-shopping-cart" aria-hidden="true" ></i> Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Jaket Eiger(300000)</h5>
+          <p class="card-text">Id:3356789</p>
+          <button class="add btn btn-success" data-id="3" data-nama="Eiger" data-qty="1" data-price="300000"><i class="fa fa-shopping-cart" aria-hidden="true" ></i> Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+         
+  <div id="cart" class=" bookmark-height-well well well-sm table-responsive"> 
+        <center><h2>Keranjang Belanja Toko Kodoline </h2><p></p></center><hr>
+        <ul id="cartBody" class="list-group"></ul>
+        <div id="totalCart" class="col-lg-12"></div>
+  </div>
+  
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+  var mycart = [];
+        $(function () {
+            if (localStorage.mycart)
+            {
+                mycart = JSON.parse(localStorage.mycart);
+                showCart();
+            }
+        });
+
+      
+
+      $('.add').click(function(){
+
+        var id   = $(this).data("id");
+        var nama   = $(this).data("nama");
+        var qty   = $(this).data("qty");
+        var price   = $(this).data("price");
+        var subtotal = price * qty;
+        addToCart(id,nama,qty,price,subtotal);   
+      })
+
+      function addToCart(id,nama,qty,price,subtotal) {
+            for (var i in mycart) {
+                if(mycart[i].Id == id)
+                {
+                    mycart[i].Qty = mycart[i].Qty+qty;
+                    mycart[i].Subtotal = subtotal * mycart[i].Qty;
+                    showCart(); 
+                    saveCart(); 
+                    return;
+                  
+                }
+            
+            }
+
+
+            var item = { Id: id, Nama:nama, Qty:qty, Price:price, Subtotal:subtotal}; 
+            mycart.push(item);
+            saveCart();
+            showCart();
+        }
+
+        function deleteItem(index){
+            mycart.splice(index,1); 
+            showCart();
+            saveCart();
+        }
+
+        function saveCart() {
+            if ( window.localStorage)
+            {
+                localStorage.mycart = JSON.stringify(mycart);
+            }
+        }
+
+        function showCart() {
+          if (mycart.length == 0) { 
+                $("#cart").css("visibility", "hidden");
+                return;
+          }
+
+          $("#cart").css("visibility", "visible");  
+          $("#cartBody").empty();
+
+          for (var i in mycart) { 
+            var item = mycart[i];
+            var row = '<div class="media"><div class="media-left media-top"></div><div class="media-body"><div class="col-lg-12"><div class="col-lg-10"><p>Nama Product <span style="padding-left:0.8em">: </span>'
+                        + item.Nama +'</p><p>Jumlah <span style="padding-left:4em">:</span> '+ item.Qty +'</p><p>Harga <span style="padding-left:4.5em">:</span> '+ item.Price +'</p></div><div class="col-lg-2"><br><button class="btn btn-danger btn-circle" onclick="deleteItem(' 
+                              + i + ')"><i class="fa fa-trash"  > </i></button></div></div></div></div><hr>' ;
+    
+            $("#cartBody").append(row); 
+          }
+          var total = 0;
+          for(var i = 0; i < mycart.length; i++) {
+              total += mycart[i].Subtotal; 
+          }
+          totalCart.innerHTML='<label>Total Belanja Anda : '+total+'  </label><br><br><br>'; 
+        }
+</script>
+
+</body>
+</html>

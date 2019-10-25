@@ -1,0 +1,65 @@
+.header{
+  width: 100%;
+  font-family:arial;
+  height: 50px;
+  font-size: 30px;
+  display: inline-block;
+  text-align: center;
+
+}
+hr{
+    width: 80%;
+    margin: auto;
+
+}
+.judul{
+  color: orange;
+  background-color: black;
+  padding: 20px;
+  display: block;
+  text-align: right;
+}
+.judul h2{
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.judul input{
+    width: 400px;
+    margin: 0;
+    padding:13px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+}
+.judul a{
+    font-size: 16px;
+    background-color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+.judul a:hover{
+    background-color: orange;
+    color: white;
+}
+.right-menu li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.right-menu li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.right-menu li a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+.isi img{
+  width: 300px;
+  height: auto;
+}

@@ -1,0 +1,69 @@
+body{
+	margin: 0
+}
+
+.header{
+	width: 100%;
+	font-family: "Chiller", fantasy;
+	height: 50px;
+	font-size: 30px;
+}
+
+.logo{
+	width: 30%;
+	float: left;
+}
+
+.judul{
+	margin: 10px;
+	background: black;
+	color: orange;
+	width: 90px;
+	padding: 5px;
+	font-size: 25px;
+	float: left;
+}
+.kategori img{
+	width: 50px;
+	height: auto;
+	float: left;
+
+}
+.kategori p{
+	margin-top: 10px;
+	float: left;
+
+}
+.tengah{
+	width: 40%;
+	float: left;
+}
+
+.kanan{
+	width: 30%;
+	float: left;
+}
+.toko img{
+	width: 50px;
+	height: auto;
+	float: left;
+}
+.troli img{
+	width: 50px;
+	height: auto;
+	float: left;
+}
+}
+nav ul{
+    float: right;
+    display: flex;
+    list-style-type: none;
+}
+nav a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding: 10px 25px; /*padding item dengan item lainnya*/
+}
